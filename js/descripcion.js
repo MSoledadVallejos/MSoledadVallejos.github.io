@@ -10,7 +10,8 @@ $(() => {
 
   $("#status").append(datoUrl.split("&")[3]);
 
-  $("#origen").append(datoUrl.split("&")[4].split("%20").join(" "));
+  /* $("#origen").append(datoUrl.split("&")[4].split("%20").join(" ")); */
+  $("#origen").append(datoUrl.split("&")[4].replaceAll("%20", " ")); //otra forma de acerlo
 
   $("#gender").append(datoUrl.split("&")[5]);
 });
